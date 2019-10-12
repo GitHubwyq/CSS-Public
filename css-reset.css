@@ -2,8 +2,11 @@
     margin: 0;
     padding: 0;
 }
-html{ 
-    overflow-y: scroll; 
+/* 移动端html标签几个体验优化 */
+html,body{
+    overflow: hidden;/*手机上写overflow-x:hidden;会有兼容性问题，如果子级如果是绝对定位有运动到屏幕外的话ios7系统会出现留白*/
+    -webkit-overflow-scrolling:touch;/*流畅滚动,ios7下会有滑一下滑不动的情况，所以需要写上*/
+    position:realtive;/*直接子级如果是绝对定位有运动到屏幕外的话，会出现留白*/
 }
 a{
     text-decoration: none;
@@ -129,3 +132,26 @@ textarea{
     word-break: break-all;
     word-wrap: break-word;
 }  
+/* css禁用鼠标事件 */
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+/* css禁止用户选择 */
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* 开启硬件加速 */
+/* 目前，像Chrome/Filefox/Safari/IE9+以及最新版本Opera都支持硬件加速，当检测到某个DOM元素应用了某些CSS规则时就会自动开启，从而解决页面闪白，保证动画流畅。 */
+/* .css { */
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}

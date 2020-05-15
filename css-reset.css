@@ -5,9 +5,8 @@
 }
 /* 移动端html标签几个体验优化 */
 html,body{
-    overflow: hidden;/*手机上写overflow-x:hidden;会有兼容性问题，如果子级如果是绝对定位有运动到屏幕外的话ios7系统会出现留白*/
+    line-height: 1.5; /*告诉浏览器 让它渲染行高是 渲染字体大小的1.5倍*/
     -webkit-overflow-scrolling:touch;/*流畅滚动,ios7下会有滑一下滑不动的情况，所以需要写上*/
-    position:realtive;/*直接子级如果是绝对定位有运动到屏幕外的话，会出现留白*/
 }
 a{
     text-decoration: none;
@@ -155,4 +154,9 @@ body{
     -moz-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+}
+
+/*表格相等宽度*/
+.calendar {    
+    table-layout: fixed;  
 }

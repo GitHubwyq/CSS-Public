@@ -69,7 +69,7 @@ textarea{
     display: -ms-flexbox;
     display: flex;
 }
-.flex_v{
+.flex_column{
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -93,11 +93,11 @@ textarea{
     -ms-flex: 3;
     flex: 3;
 }
-.flex_hc{
+.flex_Jcenter{
     -webkit-justify-content: center;
     justify-content: center;
 }
-.flex_hm{
+.flex_Acenter{
     display: -webkit-box;
      display: -webkit-flex;
      display: flex;
@@ -105,11 +105,11 @@ textarea{
      -webkit-align-items: center;
      align-items: center;
 }
-.flex_ld{
+.flex_sp{
     -webkit-justify-content: space-between;
     justify-content: space-between;
 }
-.flex_k{
+.flex_sa{
     -webkit-justify-content: space-around;
     justify-content: space-around;
 }
